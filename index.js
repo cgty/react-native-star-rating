@@ -57,9 +57,10 @@ class StarRating extends Component {
   }
 
   pressStarButton(rating) {
-    this.props.selectedStar(rating);
+    let newRating = (this.state.rating == rating ? 0 : rating);
+    this.props.selectedStar(newRating);
     this.setState({
-      rating: rating
+      rating: newRating
     });
   }
 
