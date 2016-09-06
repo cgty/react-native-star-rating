@@ -58,11 +58,11 @@ class StarRating extends Component {
 
   pressStarButton(rating) {
     let newRating = (
-      this.props.deselectable && this.state.rating == rating
+      this.props.clearable && this.state.rating == rating
       ? 0
       : rating
     );
-    
+
     this.props.selectedStar(newRating);
     this.setState({
       rating: newRating
@@ -123,7 +123,7 @@ StarRating.propTypes = {
   starColor: PropTypes.string,
   emptyStarColor: PropTypes.string,
   starSize: PropTypes.number,
-  deselectable: PropTypes.bool
+  clearable: PropTypes.bool
 }
 
 StarRating.defaultProps = {
@@ -137,7 +137,7 @@ StarRating.defaultProps = {
   starColor: 'black',
   emptyStarColor: 'gray',
   starSize: 40,
-  deselectable: false
+  clearable: false
 }
 
 const styles = StyleSheet.create({
