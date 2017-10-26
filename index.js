@@ -8,8 +8,9 @@ import {
 
 import React, {
   Component,
-  PropTypes
 } from 'react';
+
+import PropTypes from 'prop-types';
 
 // Third party imports
 import Button from 'react-native-button';
